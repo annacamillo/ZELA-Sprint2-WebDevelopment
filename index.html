@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZELA - Dashboard do Morador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <h1 class="cabecalho__logo">ZELA</h1>
+
+        <nav class="cabecalho__navegacao">
+            <a href="index.html">Morador</a>
+            <a href="autoridades.html">Defesa Civil</a>
+        </nav>
+    </header>
+
+    <main class="morador">
+
+        <h2 class="morador__titulo">
+            Dashboard do Morador
+        </h2>
+
+        <p class="morador__descricao">
+            Consulte alertas e encontre locais seguros.
+        </p>
+
+        <section class="alerta">
+            <h2 class="alerta__titulo">Alerta da região</h2>
+
+            <p class="alerta__mensagem">
+                Consulte as informações de segurança da sua região.
+            </p>
+        </section>
+
+        <section class="abrigos">
+            <h2 class="abrigos__titulo">Abrigos seguros</h2>
+
+            <p class="abrigos__descricao">
+                Selecione um abrigo para visualizar a rota.
+            </p>
+
+            <button type="button" class="abrigos__botao">
+                Abrigo A
+            </button>
+
+            <button type="button" class="abrigos__botao">
+                Abrigo B
+            </button>
+
+            <p id="infoAbrigo" class="abrigos__informacao">
+                Nenhum abrigo selecionado.
+            </p>
+        </section>
+
+        <section class="mapa">
+            <h2 class="mapa__titulo">Mapa de rotas</h2>
+
+            <p class="mapa__aviso">
+                Área destinada ao mapa demonstrativo.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/morador.js"></script>
+
+</body>
+</html>
