@@ -23,3 +23,12 @@ function selecionarRisco(risco) {
     document.getElementById("mensagemAlertaAutoridade").innerText = mensagem;
     document.getElementById("nivelRiscoAutoridade").setAttribute("class", classe);
 }
+
+function atualizarRegiao() {
+    let regiao = document.getElementById("regiaoMonitorada").value;
+
+    let mensagem = "Região monitorada: " + regiao;
+
+    document.getElementById("mensagemRegiao").innerText = mensagem;
+}
+

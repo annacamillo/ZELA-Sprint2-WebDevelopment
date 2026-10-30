@@ -42,6 +42,24 @@
             <p class="gerenciamento__descricao">
                 Selecione o nível de risco para atualizar o alerta.
             </p>
+            
+            <label for="regiaoMonitorada" class="gerenciamento__rotulo">
+                Região monitorada
+            </label>
+
+            <select id="regiaoMonitorada" class="gerenciamento__selecao">
+                <option value="Centro">Centro</option>
+                <option value="Zona Norte">Zona Norte</option>
+                <option value="Zona Sul">Zona Sul</option>
+            </select>
+
+            <button type="button" class="gerenciamento__botao gerenciamento__confirmar" onclick="atualizarRegiao()">
+                Selecionar região
+            </button>
+
+            <p id="mensagemRegiao" class="gerenciamento__regiao">
+                Região monitorada: Centro
+            </p>
 
             <button type="button" class="gerenciamento__botao" onclick="selecionarRisco('baixo')">
                 Risco baixo
