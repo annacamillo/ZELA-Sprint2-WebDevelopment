@@ -32,3 +32,18 @@ function atualizarRegiao() {
     document.getElementById("mensagemRegiao").innerText = mensagem;
 }
 
+function verificarOcorrencia(numero) {
+    let status = document.getElementById("statusOcorrencia" + numero);
+    let botao = document.getElementById("botaoOcorrencia" + numero);
+
+    if (status.innerText === "Pendente") {
+        status.innerText = "Verificada";
+        status.setAttribute("class", "ocorrencias__status ocorrencias__status--verificada");
+        botao.innerText = "Desfazer verificação";
+
+    } else {
+        status.innerText = "Pendente";
+        status.setAttribute("class", "ocorrencias__status ocorrencias__status--pendente");
+        botao.innerText = "Marcar como verificada";
+    }
+}
