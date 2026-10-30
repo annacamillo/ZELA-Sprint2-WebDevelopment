@@ -105,3 +105,31 @@ body {
     font-size: 16px;
     line-height: 1.5;
 }
+
+/* BOTÕES DOS ABRIGOS */
+
+.abrigos__botao {
+    background: #0F4C5C;
+    color: #FFFFFF;
+    border: 1px solid #0F4C5C;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.abrigos__botao:hover {
+    background: #0E2030;
+    border-color: #0E2030;
+}
+
+.abrigos__informacao {
+    color: #0E2030;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 8px 0 0;
+}
