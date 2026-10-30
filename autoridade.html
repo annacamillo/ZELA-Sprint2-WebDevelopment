@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZELA - Dashboard do Morador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="cabecalho__marca">
+            <img src="img/logo-zela.png" alt="ZELA" class="cabecalho__logo">
+        </a>
+
+        <nav class="cabecalho__navegacao">
+            <a href="index.html" class="cabecalho__link">Morador</a>
+            <a href="autoridade.html" class="cabecalho__link">Defesa Civil</a>
+        </nav>
+    </header>
+
+    <main class="autoridade">
+
+        <h1 class="autoridade__titulo">
+            Painel da Defesa Civil
+        </h1>
+
+        <p class="autoridade__descricao">
+            Monitore e atualize os níveis de risco da região.
+        </p>
+
+        <section class="gerenciamento">
+
+            <h2 class="gerenciamento__titulo">
+                Gerenciamento de alertas
+            </h2>
+
+            <p class="gerenciamento__descricao">
+                Selecione o nível de risco para atualizar o alerta.
+            </p>
+
+            <button type="button" class="gerenciamento__botao" onclick="selecionarRiscoBaixo()">
+                Risco baixo
+            </button>
+
+            <button type="button" class="gerenciamento__botao" onclick="selecionarRiscoModerado()">
+                Risco moderado
+            </button>
+
+            <button type="button" class="gerenciamento__botao" onclick="selecionarRiscoAlto()">
+                Risco alto
+            </button>
+
+            <p id="nivelRiscoAutoridade" class="gerenciamento__nivel">
+                RISCO MODERADO
+            </p>
+
+            <p id="mensagemAlertaAutoridade" class="gerenciamento__mensagem">
+                Atenção: há condições que exigem acompanhamento.
+                Fique atento aos comunicados da Defesa Civil.
+            </p>
+
+            <p class="gerenciamento__aviso">
+                Simulação acadêmica. Nenhum alerta real será emitido.
+            </p>
+        </section>
+
+    </main>
+
+<script src="js/autoridade.js"></script>
+
+
+</body>

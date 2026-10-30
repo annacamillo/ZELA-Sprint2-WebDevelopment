@@ -100,6 +100,28 @@ body {
     margin: 0;
 }
 
+/* NÍVEL DE RISCO */
+
+.alerta__nivel {
+    display: inline-block;
+    background: #FFF0DC;
+    color: #9A4500;
+    border: 1px solid #EF6C00;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px;
+}
+
+.alerta__aviso {
+    color: #5369B0;
+    font-size: 14px;
+    border-top: 1px solid #D5E4EB;
+    padding-top: 16px;
+    margin: 20px 0 0;
+}
+
 /* CARD DE ROTAS E ABRIGOS */
 
 .rotas {
@@ -210,4 +232,131 @@ body {
     font-size: 14px;
     line-height: 1.5;
     margin: 16px 0 0;
+}
+
+/* PAINEL DA DEFESA CIVIL */
+
+.autoridade {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    gap: 24px;
+}
+
+.autoridade__titulo {
+    color: #0E2030;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.autoridade__descricao {
+    color: #0F4C5C;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* GERENCIAMENTO DE ALERTAS */
+
+.gerenciamento {
+    background: #FFFFFF;
+    border: 1px solid #D5E4EB;
+    border-radius: 20px;
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.gerenciamento__titulo {
+    color: #0F4C5C;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.gerenciamento__descricao {
+    color: #0E2030;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* BOTÕES DE RISCO */
+
+.gerenciamento__botao {
+    background: #0F4C5C;
+    color: #FFFFFF;
+    border: 1px solid #0F4C5C;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gerenciamento__botao:hover {
+    background: #0E2030;
+}
+
+/* ALERTA SELECIONADO */
+
+.gerenciamento__nivel {
+    background: #FFF0DC;
+    color: #9A4500;
+    border: 1px solid #EF6C00;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.gerenciamento__mensagem {
+    color: #0E2030;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.gerenciamento__aviso {
+    color: #5369B0;
+    font-size: 14px;
+    border-top: 1px solid #D5E4EB;
+    padding-top: 16px;
+    margin: 0;
+    width: 100%;
+}
+
+.gerenciamento__titulo,
+.gerenciamento__descricao,
+.gerenciamento__nivel,
+.gerenciamento__mensagem,
+.gerenciamento__aviso {
+    grid-column: 1 / -1;
+}
+
+.gerenciamento__nivel {
+    justify-self: start;
+}
+
+.gerenciamento__nivel--baixo {
+    background: #FFF8DB;
+    color: #705400;
+    border: 1px solid #F9A825;
+}
+
+.gerenciamento__nivel--moderado {
+    background: #FFF0DC;
+    color: #9A4500;
+    border: 1px solid #EF6C00;
+}
+
+.gerenciamento__nivel--alto {
+    background: #FCE8E8;
+    color: #A31E1E;
+    border: 1px solid #C62828;
 }
