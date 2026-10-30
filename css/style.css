@@ -59,14 +59,12 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px;
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
 }
 
 .morador__titulo {
-    grid-column: 1 / -1;
     color: #0E2030;
     font-size: 32px;
     font-weight: 700;
@@ -74,43 +72,73 @@ body {
 }
 
 .morador__descricao {
-    grid-column: 1 / -1;
     color: #0F4C5C;
     font-size: 16px;
     margin: 0;
 }
 
-/* CARDS */
+/* ALERTA DA REGIÃO */
 
-.alerta, .abrigos, .mapa {
+.alerta {
     background: #FFFFFF;
     border: 1px solid #D5E4EB;
     border-radius: 20px;
     padding: 24px;
 }
 
-.alerta {
-    grid-column: 1 / -1;
-}
-
-.alerta__titulo, .abrigos__titulo, .mapa__titulo {
+.alerta__titulo {
     color: #0F4C5C;
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 16px;
 }
 
-.alerta__mensagem, .abrigos__descricao, .mapa__aviso {
+.alerta__mensagem {
     color: #0E2030;
     font-size: 16px;
     line-height: 1.5;
+    margin: 0;
+}
+
+/* CARD DE ROTAS E ABRIGOS */
+
+.rotas {
+    display: grid;
+    grid-template-columns: 2fr auto auto 2fr;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #D5E4EB;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+/* TÍTULO E DESCRIÇÃO DOS ABRIGOS */
+
+.abrigos__titulo {
+    grid-column: 1;
+    grid-row: 1;
+    color: #0F4C5C;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.abrigos__descricao {
+    grid-column: 1;
+    grid-row: 2;
+    color: #0E2030;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* BOTÕES DOS ABRIGOS */
 
 .abrigos__botao {
-    background: #0F4C5C;
-    color: #FFFFFF;
+    background: #EAF4F8;
+    color: #0F4C5C;
     border: 1px solid #0F4C5C;
     border-radius: 10px;
     padding: 12px 20px;
@@ -118,18 +146,68 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-right: 12px;
-    margin-bottom: 12px;
 }
 
 .abrigos__botao:hover {
-    background: #0E2030;
-    border-color: #0E2030;
+    background: #D5E4EB;
 }
 
+.abrigos__botao--selecionado {
+    background: #0F4C5C;
+    color: #FFFFFF;
+}
+
+.abrigos__botao--selecionado:hover {
+    background: #0E2030;
+}
+
+#botaoAbrigoA {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+#botaoAbrigoB {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+/* INFORMAÇÃO DO ABRIGO SELECIONADO */
+
 .abrigos__informacao {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    background: #EAF4F8;
+    border-left: 4px solid #0F4C5C;
+    border-radius: 10px;
+    padding: 12px;
     color: #0E2030;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
-    margin: 8px 0 0;
+    margin: 0;
+}
+
+/* MAPA DE ROTAS */
+
+.mapa {
+    grid-column: 1 / -1;
+    border-top: 1px solid #D5E4EB;
+    padding-top: 20px;
+    margin-top: 16px;
+}
+
+.mapa__imagem {
+    width: 100%;
+    max-width: 1150px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #D5E4EB;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(14, 32, 48, 0.08);
+}
+
+.mapa__aviso {
+    color: #5369B0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 16px 0 0;
 }

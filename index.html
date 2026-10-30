@@ -41,33 +41,45 @@
             </p>
         </section>
 
-        <section class="abrigos">
-            <h2 class="abrigos__titulo">Abrigos seguros</h2>
+        
+        <section class="rotas">
 
+            <h2 class="abrigos__titulo">Abrigos seguros</h2>
             <p class="abrigos__descricao">
                 Selecione um abrigo para visualizar a rota.
             </p>
 
-            <button type="button" class="abrigos__botao" onclick="selecionarAbrigoA()">
+            <button type="button" id="botaoAbrigoA" class="abrigos__botao abrigos__botao--selecionado"
+            onclick="selecionarAbrigoA()">
                 Abrigo A
             </button>
 
-            <button type="button" class="abrigos__botao" onclick="selecionarAbrigoB()">
+            <button type="button" id="botaoAbrigoB" class="abrigos__botao"
+            onclick="selecionarAbrigoB()">
                 Abrigo B
             </button>
-
+            
             <p id="infoAbrigo" class="abrigos__informacao">
-                Nenhum abrigo selecionado.
+                Abrigo A — Ponto de apoio demonstrativo. Rota A selecionada.
             </p>
+
+            <section class="mapa">
+
+                <img
+                    src="img/mapa-abrigo-a.png"
+                    alt="Mapa demonstrativo com rota para o Abrigo A em Juiz de Fora"
+                    id="imagemMapa"
+                    class="mapa__imagem"
+                >
+
+                <p class="mapa__aviso">
+                    Simulação acadêmica: rotas e abrigos ilustrativos,
+                    não validados pela Defesa Civil.
+                </p>
+            </section>
         </section>
 
-        <section class="mapa">
-            <h2 class="mapa__titulo">Mapa de rotas</h2>
 
-            <p class="mapa__aviso">
-                Área destinada ao mapa demonstrativo.
-            </p>
-        </section>
 
     </main>
 
