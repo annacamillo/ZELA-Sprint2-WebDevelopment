@@ -1,8 +1,12 @@
+// Funções do Painel da Defesa Civil.
+
+// Recebe o nível de risco escolhido e atualiza o alerta exibido na página.
 function selecionarRisco(risco) {
     let nivel;
     let mensagem;
     let classe;
 
+    // Define o texto, a mensagem e a classe CSS conforme o nível de risco.
     if (risco === "baixo") {
         nivel = "RISCO BAIXO";
         mensagem = "A região apresenta condições de baixo risco. Continue acompanhando os comunicados da Defesa Civil.";
@@ -19,28 +23,37 @@ function selecionarRisco(risco) {
         classe = "gerenciamento__nivel gerenciamento__nivel--alto";
     }
 
+    // Atualiza o nível, a mensagem e a cor do alerta na tela.
     document.getElementById("nivelRiscoAutoridade").innerText = nivel;
     document.getElementById("mensagemAlertaAutoridade").innerText = mensagem;
     document.getElementById("nivelRiscoAutoridade").setAttribute("class", classe);
 }
 
+// Mostra na página a região escolhida no campo de seleção.
 function atualizarRegiao() {
+    // Lê o valor selecionado pela autoridade.
     let regiao = document.getElementById("regiaoMonitorada").value;
 
+    // Monta a mensagem juntando um texto fixo ao nome da região.
     let mensagem = "Região monitorada: " + regiao;
 
+    // Atualiza a mensagem exibida na página.
     document.getElementById("mensagemRegiao").innerText = mensagem;
 }
 
+// Alterna o status de uma ocorrência entre pendente e verificada.
 function verificarOcorrencia(numero) {
+    // Localiza o status e o botão da ocorrência usando o número recebido.
     let status = document.getElementById("statusOcorrencia" + numero);
     let botao = document.getElementById("botaoOcorrencia" + numero);
 
+    // Se estiver pendente, marca como verificada e muda a aparência e o botão.
     if (status.innerText === "Pendente") {
         status.innerText = "Verificada";
         status.setAttribute("class", "ocorrencias__status ocorrencias__status--verificada");
         botao.innerText = "Desfazer verificação";
 
+    // Se já estiver verificada, volta ao status pendente.
     } else {
         status.innerText = "Pendente";
         status.setAttribute("class", "ocorrencias__status ocorrencias__status--pendente");
